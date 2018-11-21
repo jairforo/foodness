@@ -1,2 +1,70 @@
-page-login {
+ion-content {
+  background-image: url("./../../assets/img/login-background.png");
+  background-color: #cccccc;
+  background-size: cover;
+
+  .logo {
+    width: 215px;
+    height: 42px;
+    display: block;
+    margin: 125px auto 0 auto;
+  }
+
+  .welcome {
+    width: 265px;
+    height: 54px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin: 50px auto;
+  }
+
+  .buttons {
+    text-align: center;
+    width: 265px;
+    margin: 0 auto;
+
+    button {
+      width: 245px;
+      height: 49px;
+      border-radius: 24.5px;
+      display: inline-block;
+    }
+  
+    .buttons__btn-facebook {
+      background-color: #395794;
+    }
+  
+    .buttons__btn-google {
+      background-color: #f4403a;
+    }
+  
+    .buttons__btn-skip-login {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0px;
+    margin: 0 auto;
+    width: 100%;
+
+    a {
+      text-decoration: underline;
+    }
+
+    p {
+      width: 265px;
+      height: 54px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      margin: 0 auto;
+    }
+  }
 }

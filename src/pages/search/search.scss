@@ -1,3 +1,38 @@
-page-search {
+.search-page {
+    ion-card {
+      position: relative;
+      text-align: center;
+      margin: 0px;
+      height: 188px;;
+      width: 100%
+    }
+  
+    .card-title h1 {
+      position: absolute;
+      top: 36%;
+      font-size: 2.5em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
 
-}
+    ion-searchbar {
+      height: 60px;
+      position: absolute;
+      margin-top: -30px;
+    }
+
+    .popular-meals{
+        height: 160px;
+
+        h2 {
+            margin: 40px 8px 10px 8px;
+            font-size: 1.3em;
+        }
+        ion-slides {
+            margin: 8px;
+        }
+    }
+    
+  }
+  

@@ -17,8 +17,8 @@
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Foodness App",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>hapiness</b> app to search food",
 
   "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
@@ -43,8 +43,15 @@
   "WELCOME_TITLE": "Welcome",
 
   "LOGIN_TITLE": "Sign in",
+  "LOGIN_WELCOME": "Welcome to Foodness, look for your next restaurant in Lisbon and choose what you want to eat.",
   "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
-  "LOGIN_BUTTON": "Sign in",
+  "LOGIN_BUTTON": "Login",
+  "LOGIN_FACEBOOK_BUTTON": "Login with Facebook",
+  "LOGIN_GOOGLE_BUTTON": "Login with Google",
+  "BUTTON_SKIP_LOGIN": "Skip login",
+  "LOGIN_TERMS_OF_USE": "By moving forward you agree to our terms of use",
+  "TERMS_OF_USE": "Terms of use",
+
   "SIGNUP_TITLE": "Sign up",
   "SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
   "SIGNUP_BUTTON": "Sign up",

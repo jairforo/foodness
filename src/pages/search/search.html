@@ -1,22 +1,43 @@
-<ion-header>
-
+<!--<ion-header>
   <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title>
   </ion-navbar>
+</ion-header>-->
 
-</ion-header>
+<ion-content class="search-page">
 
+  <ion-card>
+    <img src="./../../assets/img/search-background.png"/>
+    <div class="card-title">
+      <h1>Foodness</h1>
+    </div>
+  </ion-card>
 
-<ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
-  <ion-list>
-    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
-      <ion-avatar item-start>
-        <img [src]="item.profilePic" />
-      </ion-avatar>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-    </button>
-  </ion-list>
+  <ion-searchbar placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+
+  <div class="popular-meals">
+    <h2>
+      Principais escolhas em Lisboa
+      <span right>All</span>
+    </h2>
+    <ion-slides autoplay="500">
+      <ion-slide>
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/13/b4/a1/86/francesinha-portuguese.jpg"/>
+      </ion-slide>
+  
+      <ion-slide>
+          <img src="https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18173701/051092056-01-spaghetti-carbonara-recipe-thumb16x9.jpg"/>
+      </ion-slide>
+  
+      <ion-slide>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgPRn6x4XJctzEtDl4Qn1vHaefnpKbe0UMM-zxQIJE1e87jHPpvg"/>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  
 </ion-content>

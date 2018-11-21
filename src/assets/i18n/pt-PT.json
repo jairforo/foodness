@@ -31,6 +31,7 @@
   "WELCOME_TITLE": "Bem-vindo",
 
   "LOGIN_TITLE": "Entrar",
+  "LOGIN_WELCOME": "Bem vindo ao Foodness, procure o seeu próximo restaurante em Lisboa eescolhendo o que deseja mer.",
   "LOGIN_ERROR": "Não foi possível entrar na sua conta. Por favor confirme os seus dados e tente novamente.",
   "LOGIN_BUTTON": "Entrar",
   "SIGNUP_TITLE": "Criar conta",
