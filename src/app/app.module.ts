@@ -8,8 +8,10 @@ import { IonicStorageModule, Storage } from '@ionic/storage';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { Facebook } from '@ionic-native/facebook';
 
 import { Items } from '../mocks/providers/items';
+import { Ingredients } from '../providers/ingredients/ingredients';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
@@ -49,7 +51,7 @@ export function provideSettings(storage: Storage) {
       }
     }),
     IonicModule.forRoot(MyApp, {
-      mode: "md"
+      mode: "md",
     }, null),
     IonicStorageModule.forRoot()
   ],
@@ -60,10 +62,12 @@ export function provideSettings(storage: Storage) {
   providers: [
     Api,
     Items,
+    Ingredients,
     User,
     Camera,
     SplashScreen,
     StatusBar,
+    Facebook,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }

@@ -1,20 +1,20 @@
-<ion-content>
-  <img class="logo" src="./../../assets/img/logo.png" alt="Foodness Logo">
+<ion-content class="login-page">
+    <img class="logo" src="./../../assets/img/logo.png" alt="Foodness Logo">
 
-  <p class="welcome">{{ 'LOGIN_WELCOME' | translate }}</p>
+    <p class="welcome">{{ 'LOGIN_WELCOME' | translate }}</p>
 
-  <div class="buttons">
-    <button class="buttons__btn-facebook" ion-button round>{{ 'LOGIN_FACEBOOK_BUTTON' | translate }}</button>
-    <button class="buttons__btn-google" ion-button round>{{ 'LOGIN_GOOGLE_BUTTON' | translate }}</button>
-    <button class="buttons__btn-skip-login" ion-button outline round>{{ 'BUTTON_SKIP_LOGIN' | translate }}</button>
-  </div>
-    
-  <div class="footer">
-    <p>
-      {{ 'LOGIN_TERMS_OF_USE' | translate }}
-      <a href="http://foodness.love/terms-of-use" target="_blank">
-        {{ 'TERMS_OF_USE' | translate }}
-      </a>
-    </p>
-  </div>
+    <div class="buttons">
+      <button class="buttons__btn-facebook" (click)="facebookLogin()" ion-button round>{{ 'LOGIN_FACEBOOK_BUTTON' | translate }}</button>
+      <button class="buttons__btn-google" ion-button round>{{ 'LOGIN_GOOGLE_BUTTON' | translate }}</button>
+      <button class="buttons__btn-skip-login" (click)="skipLogin()" ion-button outline round>{{ 'BUTTON_SKIP_LOGIN' | translate }}</button>
+    </div>
+      
+    <div class="footer">
+      <p>
+        {{ 'LOGIN_TERMS_OF_USE' | translate }}
+        <a href="http://foodness.love/terms-of-use" target="_blank">
+          {{ 'TERMS_OF_USE' | translate }}
+        </a>
+      </p>
+    </div>
 </ion-content>

@@ -1,19 +1,30 @@
 .search-page {
+  .header {
     ion-card {
       position: relative;
       text-align: center;
       margin: 0px;
-      height: 188px;;
-      width: 100%
-    }
-  
-    .card-title h1 {
-      position: absolute;
-      top: 36%;
-      font-size: 2.5em;
       width: 100%;
-      font-weight: bold;
-      color: #fff;
+
+      img {
+        height: 188px;
+        background-size: cover;
+      }
+  
+      .card-logo {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+
+        img {
+          position: absolute;
+          top: 36%;
+          margin-left: -108px;
+          left: 50%;
+          width: 216px;
+          height: 42px;
+        }
+      }
     }
 
     ion-searchbar {
@@ -21,18 +32,61 @@
       position: absolute;
       margin-top: -30px;
     }
-
-    .popular-meals{
-        height: 160px;
-
-        h2 {
-            margin: 40px 8px 10px 8px;
-            font-size: 1.3em;
-        }
-        ion-slides {
-            margin: 8px;
-        }
-    }
-    
   }
-  
+
+  .block{
+    margin-top: 45px;
+
+    .chips {
+      padding: 8px;
+
+      ion-chip {
+        border-radius: 17px;
+        background-color: #ffffff;
+        border: 1px solid #0ebfc1;
+
+        ion-label {
+          color: #0ebfc1;
+          padding: 0px 10px
+        }
+      }
+    }
+
+    h2 {
+      margin: 8px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #6f6e6e;
+
+      span {
+        float: right;
+        color: #0ebfc1;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 5px 0 0 5px;
+        text-decoration: underline;
+      }
+    }
+    ion-slides {
+      ion-slide {
+        width: 125px !important;
+        padding: 0px;
+
+        ion-card {
+          ion-card-content {
+            padding: 0px 2px;
+
+            ion-card-title {
+              text-align: left;
+              font-size: 14px;
+              height: 32px;
+              font-weight: bold;
+              color: #6f6e6e;
+              padding: 0px 2px;
+            }
+          }
+        }
+      }
+    }
+  }  
+}

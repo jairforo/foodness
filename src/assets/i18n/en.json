@@ -1,5 +1,6 @@
 {
   "BACK_BUTTON_TEXT": "Back",
+  "SEE_ALL": "see all",
 
   "NAME": "Name",
   "EMAIL": "Email",
@@ -71,5 +72,6 @@
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Search",
-  "SEARCH_PLACEHOLDER": "Search the items list, e.g. \"Donald Duck\""
+  "SEARCH_PLACEHOLDER": "What do you want to eat today?",
+  "TITLE_TOP_CHOICES": "Top choices in Lisbon"
 }
