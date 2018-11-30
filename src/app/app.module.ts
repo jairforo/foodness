@@ -10,9 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
 
-import { Items } from '../mocks/providers/items';
-import { Ingredients } from '../providers/ingredients/ingredients';
-import { Settings, User, Api } from '../providers';
+import { Settings, User, Api, Items, Ingredients, Meals } from '../providers';
 import { MyApp } from './app.component';
 
 // The translate loader needs to know where to load i18n files
@@ -63,6 +61,7 @@ export function provideSettings(storage: Storage) {
     Api,
     Items,
     Ingredients,
+    Meals,
     User,
     Camera,
     SplashScreen,

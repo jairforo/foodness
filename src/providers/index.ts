@@ -1,5 +1,6 @@
-export { Api } from './api/api';
+export { Api } from './api';
 export { Items } from '../mocks/providers/items';
-export { Ingredients } from './ingredients/ingredients';
-export { Settings } from './settings/settings';
-export { User } from './user/user';
+export { Ingredients } from './ingredients';
+export { Meals } from './meals';
+export { Settings } from './settings';
+export { User } from './user';

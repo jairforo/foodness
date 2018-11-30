@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Api } from '../api/api';
+import { Api } from './api';
 
 @Injectable()
 export class Ingredients {
@@ -10,5 +10,4 @@ export class Ingredients {
   query(params?: any) {
     return this.api.get('ingredients', params);
   }
-
 }

@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController} from 'ionic-angular';
 
 import { Ingredients, Meals } from '../../providers';
-import { Ingredient} from '../../models/ingredient'
 
 @IonicPage()
 @Component({
-  selector: 'page-search',
-  templateUrl: 'search.html'
+  selector: 'page-result',
+  templateUrl: 'result.html'
 })
-export class SearchPage {
+export class ResultPage {
 
+  ingredient: any;
   ingredients: any = [];
   meals: any = [];
 
@@ -20,7 +20,9 @@ export class SearchPage {
     public navParams: NavParams, 
     public ingredientService: Ingredients,
     public mealService: Meals
-  ) { }
+  ) { 
+    this.ingredient = navParams.get('ingredient');
+  }
 
   /** Perform a service for the proper items. */
   ngOnInit() {
@@ -35,14 +37,4 @@ export class SearchPage {
     });
   }
 
-  showSearchPage(ev) {
-    let searchQuery = ev.target.value;
-
-    let profileModal = this.modalCtrl.create('SearchModalPage', {searchQuery});
-    profileModal.present();
-  }
-
-  showResults(ingredient: Ingredient) {
-    this.navCtrl.push('ResultPage', { ingredient });
-  }
 }

@@ -1,0 +1,15 @@
+<ion-content padding>
+    <div [hidden]="!searchQuery">
+      <h5>Parameters passed:</h5>
+  
+      <pre style="background-color: #f8f8f8">selections: [
+    {{searchQuery}}
+  ]</pre>
+  
+    </div>
+    <div [hidden]="myParam">
+      <p>No parameters passed.</p>
+    </div>
+    <button ion-button color="danger" full (click)="dismiss()">Close Modal</button>
+  
+  </ion-content>

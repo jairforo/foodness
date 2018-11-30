@@ -6,7 +6,8 @@
         <img src="./../../assets/img/logo.png" />
       </div>
     </ion-card>
-    <ion-searchbar 
+    <ion-searchbar
+      (ionInput)="showSearchPage($event)"
       placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}">
     </ion-searchbar>
   </div>
@@ -17,147 +18,47 @@
       <span right>{{ 'SEE_ALL' | translate }}</span>
     </h2>
     <ion-slides>
-      <ion-slide>
+      <ion-slide *ngFor="let meal of meals">
         <ion-card>
             <img src="./../../assets/img/francesinha.jpg"/>
             <ion-card-content>
               <ion-card-title>
-                Francesinha a bolonhesa
+                {{ meal.name }}
               </ion-card-title>
             </ion-card-content>
           </ion-card>
       </ion-slide>
-      <ion-slide>
-        <ion-card>
-            <img src="./../../assets/img/hamburguer.jpg"/>
-            <ion-card-content>
-              <ion-card-title>
-                Hamburguer
-              </ion-card-title>
-            </ion-card-content>
-          </ion-card>
-      </ion-slide>
-      <ion-slide>
-          <ion-card>
-              <img src="./../../assets/img/francesinha.jpg"/>
-              <ion-card-content>
-                <ion-card-title>
-                  Francesinha
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-      </ion-slide>
-      <ion-slide>
-          <ion-card>
-              <img src="./../../assets/img/hamburguer.jpg"/>
-              <ion-card-content>
-                <ion-card-title>
-                  Hamburguer
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-        </ion-slide>
-        <ion-slide>
-            <ion-card>
-                <img src="./../../assets/img/francesinha.jpg"/>
-                <ion-card-content>
-                  <ion-card-title>
-                    Francesinha
-                  </ion-card-title>
-                </ion-card-content>
-              </ion-card>
-        </ion-slide>
-        <ion-slide>
-            <ion-card>
-                <img src="./../../assets/img/hamburguer.jpg"/>
-                <ion-card-content>
-                  <ion-card-title>
-                    Hamburguer
-                  </ion-card-title>
-                </ion-card-content>
-              </ion-card>
-        </ion-slide>
     </ion-slides>
   </div>
 
-  <div class="block choose-ingredient">
+  <div class="block choose-ingredient" style="margin-top: 15px">
       <h2>
         Escolha os ingredientes
         <span right>see all</span>
       </h2>
       <div class="chips">
-        <ion-chip *ngFor="let ingredient of ingredients">
+        <ion-chip *ngFor="let ingredient of ingredients" (click)="showResults(ingredient)">
           <ion-label>{{ ingredient.name }}</ion-label>
         </ion-chip>
       </div>
   </div>
 
-  <div class="block the-best-especific-meal">
+  <div class="block the-best-especific-meal" style="margin-top: 15px">
     <h2>
       Os melhores pasteis de Nata
       <span right>see all</span>
     </h2>
     <ion-slides>
-      <ion-slide>
+      <ion-slide *ngFor="let meal of meals">
         <ion-card>
             <img src="./../../assets/img/francesinha.jpg"/>
             <ion-card-content>
               <ion-card-title>
-                Francesinha
+                {{ meal.name }}
               </ion-card-title>
             </ion-card-content>
           </ion-card>
       </ion-slide>
-      <ion-slide>
-          <ion-card>
-              <img src="./../../assets/img/hamburguer.jpg"/>
-              <ion-card-content>
-                <ion-card-title>
-                  Hamburguer
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-      </ion-slide>
-      <ion-slide>
-          <ion-card>
-              <img src="./../../assets/img/francesinha.jpg"/>
-              <ion-card-content>
-                <ion-card-title>
-                  Francesinha
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-      </ion-slide>
-      <ion-slide>
-          <ion-card>
-              <img src="./../../assets/img/hamburguer.jpg"/>
-              <ion-card-content>
-                <ion-card-title>
-                  Hamburguer
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-        </ion-slide>
-        <ion-slide>
-            <ion-card>
-                <img src="./../../assets/img/francesinha.jpg"/>
-                <ion-card-content>
-                  <ion-card-title>
-                    Francesinha
-                  </ion-card-title>
-                </ion-card-content>
-              </ion-card>
-        </ion-slide>
-        <ion-slide>
-            <ion-card>
-                <img src="./../../assets/img/hamburguer.jpg"/>
-                <ion-card-content>
-                  <ion-card-title>
-                    Hamburguer
-                  </ion-card-title>
-                </ion-card-content>
-              </ion-card>
-        </ion-slide>
     </ion-slides>
   </div>
 </ion-content>
