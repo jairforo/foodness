@@ -15,7 +15,7 @@
   <div class="block top-choices">
     <h2>
       {{ 'TITLE_TOP_CHOICES' | translate }}
-      <span right>{{ 'SEE_ALL' | translate }}</span>
+      <see-all></see-all>
     </h2>
     <ion-slides>
       <ion-slide *ngFor="let meal of meals">
@@ -34,19 +34,17 @@
   <div class="block choose-ingredient" style="margin-top: 15px">
       <h2>
         Escolha os ingredientes
-        <span right>see all</span>
+        <see-all></see-all>
       </h2>
       <div class="chips">
-        <ion-chip *ngFor="let ingredient of ingredients" (click)="showResults(ingredient)">
-          <ion-label>{{ ingredient.name }}</ion-label>
-        </ion-chip>
+          <ingredient-chip *ngFor="let ingredient of ingredients" (click)="showResults(ingredient)" [ingredient]="ingredient"></ingredient-chip>
       </div>
   </div>
 
   <div class="block the-best-especific-meal" style="margin-top: 15px">
     <h2>
       Os melhores pasteis de Nata
-      <span right>see all</span>
+      <see-all></see-all>
     </h2>
     <ion-slides>
       <ion-slide *ngFor="let meal of meals">

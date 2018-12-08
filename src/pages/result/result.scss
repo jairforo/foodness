@@ -1,7 +1,53 @@
 .result-page {
-  ion-card {
-    img {
-      height: 120px;
+  h1 {
+    margin-left: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: #4b4b50;
+  }
+
+  .search {
+    padding: 0px 8px;
+  }
+
+  .ingredients {
+    .chips {
+      padding: 0px 8px;
+    }
+  }
+
+  .results {
+    ion-card {
+      img {
+        height: 120px;
+      }
+  
+      ion-item {
+        padding: 0px 5px;
+  
+        ion-label {
+          margin: 0px !important;
+          h2 {
+            font-size: 15px;
+            font-weight: bold;
+            color: #4b4b50;
+    
+            span {
+              float: right;
+              color: #0ebfc1;
+            }
+          }
+    
+          p {
+            font-size: 13px;
+  
+            ion-icon {
+              color: #0ebfc1;
+            }
+          }
+        }      
+      }
     }
   }
 }

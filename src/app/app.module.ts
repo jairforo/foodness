@@ -51,7 +51,7 @@ export function provideSettings(storage: Storage) {
     IonicModule.forRoot(MyApp, {
       mode: "md",
     }, null),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

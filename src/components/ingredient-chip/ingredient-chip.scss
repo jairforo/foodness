@@ -1,0 +1,26 @@
+ingredient-chip {
+    ion-chip {
+        border-radius: 17px;
+        background-color: #ffffff;
+        border: 1px solid #0ebfc1;
+        margin-right: 2px;
+
+        ion-label {
+            color: #0ebfc1;
+            padding: 0px 10px
+        }
+        .chip-md {
+            background: none !important;
+        }
+    }
+
+    .chip-md {
+        border-radius: 16px;
+        height: 32px;
+        font-size: 13px;
+        line-height: 32px;
+        color: rgba(0, 0, 0, 0.87);
+        background: none !important;
+        margin: 4px 4px 0 0;
+    }
+}

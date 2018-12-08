@@ -1,29 +1,33 @@
 <ion-content class="result-page">
-  <ion-card *ngFor="let meal of meals">    
-    <img src="../../assets/img/meal.png">
-  
-    <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-    </ion-card-content>
-  
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-start clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-start clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+  <div class="search">
+      <ion-searchbar
+      placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}">
+    </ion-searchbar>
+  </div>
+
+  <div class="ingredients">
+    <h1>
+        Do you want to increase your search?
+    </h1>
+    <div class="chips">
+      <ingredient-chip *ngFor="let ingredient of ingredients" (click)="showResults(ingredient)" [ingredient]="ingredient"></ingredient-chip>
+    </div>
+  </div>
+
+  <div class="results">
+    <h1>{{ meals.length }} {{ 'RESULTS' | translate}}</h1>
+    <ion-card *ngFor="let meal of meals">    
+      <img src="../../assets/img/meal.png">
+      <ion-item>
+        <h2>
+          {{ meal.name }}
+          <span>24.45 $</span>
+        </h2>
+        <p>
+          <ion-icon name="pin"></ion-icon>
+          Pastelaria Lobafo em Campolide
+        </p>
+      </ion-item>
+    </ion-card>
+  </div>
 </ion-content>

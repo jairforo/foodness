@@ -3,6 +3,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { SearchPage } from './search';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
@@ -10,10 +11,11 @@ import { SearchPage } from './search';
   ],
   imports: [
     IonicPageModule.forChild(SearchPage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    ComponentsModule //Avoid imports all components like this <--
   ],
   exports: [
-    SearchPage
+    SearchPage,
   ]
 })
 export class SearchPageModule { }
